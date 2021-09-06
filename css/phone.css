@@ -1,0 +1,31 @@
+/**menu for phone**/
+@media(max-width:900px){
+    .navlinks ul li{
+        display: block;
+        color: #000;
+    }
+    .navlinks {
+        position: absolute;
+        height: 100vh;
+        width:100%;
+        top:-100vh;
+    }
+    .footer{
+        margin-top: 100px;
+        width:100%;
+        text-align: center;
+        min-height: 300px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(3,1fr);
+        grid-gap: 10%;
+        align-items: end;
+    }
+    
+    .footer .row{
+        min-height: 50px;
+    }
+    p, h2{
+        padding: 10px 25px;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BlogSite</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link href="./css/style.css" rel="stylesheet">
+        <script src="./js/app.js"></script>
+        <script src="https://kit.fontawesome.com/2fd534ab8e.js" crossorigin="anonymous"></script>
+        <!-- google fontss-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="navbar">
+                <a href="index.html">logo</a>
+                <ul class="navlinks">
+                    <i class="fas fa-times" id="close" onclick="hideMenu()"></i>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <i class="fas fa-bars" id="menu"onclick="showMenu()"></i>
+            </nav>
+            <header class="header">
+                <div class="header-content">
+                    <h1>Welcome folks</h1>
+                    <p>Click here to know more</p>
+                    <a class="hero-btn" href="about.html">About Us</a>
+                </div>
+            </header>
+            <div class="container box">
+                <div class="box" id="one">
+                    <video  loop class="video" type="video/mp4" src="../project1trial2/video/1stwatch.mp4" alt="your browser does not support this video"></video>
+                </div>
+                <div class="box" id="two">
+                    <h2>Maen Hudson</h2>
+                    <p>At MAEN we do things <strong>differently</strong> We like to keep an open mind and design unique timepieces.<br>
+                        We have a sincere focus on quality, materials and the smallest details and we believe that this is an important strength of our brand.<br>
+                        MAEN Watches are contemporary timekeepers and our goal is to create watches that exceed expectations.
+                    </p><br>
+                    <a class="hero-btn" href="about.html">Learn More</a>
+                </div>
+                <div class="box" id="three">
+                    <video  loop class="video" type="video/mp4" src="../project1trial2/video/2ndwatch.mp4" alt="your browser does not support this video"></video>
+                </div>
+                <div class="box" id="four">
+                    <h2>Maestro</h2>
+                    <p>
+                        Discover the maestro men's Swiss luxury mechanical watches in steel and genuine leather options, open-worked dials and date window displays.<br>
+                        The maestro watch is set on a stainless steel bracelet equipped with a double-push security system folding clasp.
+                    </p><br>
+                    <a class="hero-btn" href="about.html">Learn More</a>
+                </div>
+                <div class="box" id="five">
+                    <video  loop class="video" type="video/mov" src="../project1trial2/video/3rdwatch.mov#t=2,100" alt="your browser does not support this video"></video>
+                </div>
+                <div class="box" id="six">
+                    <h2>Tourbillion</h2>
+                    <p>In watchmaking, a tourbillon, also called a “rotating cage”, <br>
+                        is a horological complication, added to the escapement mechanism, <br>
+                        intended to improve the precision of mechanical watches by counterbalancing the disturbances of the isochronism of the resonator due to terrestrial gravity.
+                    </p>
+                    <br>
+                    <a class="hero-btn" href="about.html">Learn More</a>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="social-media row">
+                    <h2>Social Media</h2>
+                    <p>Here are the links to our social media pages</p>
+                    <ul class="sociallinks">
+                        <li><i class="fab fa-facebook-square"></i></li>
+                        <li><i class="fab fa-twitter-square"></i></li>
+                        <li><i class="fab fa-instagram"></i></i></li>
+                        <li><i class="fab fa-youtube-square"></i></li>
+                    </ul>
+                </div>
+                <div class="Author row">
+                    <h2>Authour</h2>
+                    <p>Powered by PGHO.<br>World class developer!</p>
+                </div>
+                <div class="contact-info row">
+                    <h2>Contact Info</h2>
+                    <i class="fas fa-phone-square-alt"></i>
+                    <p>0033423123124</p>
+                </div>
+            </footer>
+        </div>
+
+        <script>
+            let close = document.querySelector("#close");
+            let menu = document.querySelector("#menu");
+            let navlinks= document.querySelector(".navlinks");
+            let media=window.matchMedia("(max-width:900px)");
+            let a = document.querySelectorAll(".navlinks fas, .navlinks ul");
+     
+            /*autoplay code*/
+            const video=document.querySelectorAll('.video');
+            for(let i=0;i<video.length;i++){
+                video[i].addEventListener('mouseenter',function(e){
+                    this.play();
+                });
+                video[i].addEventListener('mouseout',function(e){
+                    this.pause();
+                });
+            }
+            
+
+            function hideMenu(){
+                navlinks.style.top="-100vh";
+                navlinks.style.transition="0.5s";
+                navlinks.style.color="#fff";
+                navlinks.style.background="#000";
+                
+            }
+            function showMenu(){
+                navlinks.style.top="0";
+                navlinks.style.color="#000";
+                navlinks.style.background="#000";
+                navlinks.style.transition="0.5s";
+            }
+        </script>
+    </body>
+</html>
+
+

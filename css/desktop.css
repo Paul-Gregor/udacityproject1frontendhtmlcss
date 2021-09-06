@@ -1,0 +1,27 @@
+
+
+/**dessktop code **/
+@media(min-width:900px){
+    h1{
+        font-size: 70px;
+    }
+    .container{
+        grid-template-columns: 2fr 1fr;
+        row-gap: 250px;
+    }
+    .navbar .navlinks{
+        display: contents;
+    }
+    .navbar .fas{
+        display: none;
+    }
+    .footer{
+        width:100%;
+        text-align: center;
+        min-height: 300px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 10%;
+        align-items: end;
+    }
+}
